@@ -3,16 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Posts Workshop</title>
-    <script src='../bower_components/angular/angular.min.js'></script>
-    <script src="../bower_components/angular/angular.min.js"></script>
-
-    <!-- <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js'></script> -->
+    <script src='/bower_components/angular/angular.min.js'></script>
+    <script src="/bower_components/angular-route/angular-route.min.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.min.js'></script>
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
-
     <script src='app.js'></script>
+    <script src='controllers.js'></script>
   </head>
   <body ng-controller='applicationController'>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -21,14 +20,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Brand</a>
+          <a class="navbar-brand" href="/#/">Brand</a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Link</a></li>
+            <li><a href="/#/posts">All Posts</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -61,14 +59,12 @@
               </ul>
             </li>
           </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
+        </div>
+      </div>
     </nav>
+    <ng-view></ng-view>
 
-    <div>
-        <p>{{add}}</p>
-        <p>{{4+9}}</p>
-    </div>
+
 
 
 

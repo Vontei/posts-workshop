@@ -1,6 +1,13 @@
-var app = angular.module('posts-workshop', [])
+var app = angular.module('posts-workshop', ['ngRoute']);
 
-
-app.controller('applicationController', function ($scope) {
-  $scope.add = 1+10;
-})
+app.config(function($routeProvider) {
+  $routeProvider
+    .when('/', {
+      templateUrl: 'partials/home.html',
+      controller: 'applicationController'
+    })
+    .when('/posts', {
+      templateUrl: 'partials/posts.html',
+      controller: 'applicationController'
+    })
+});
